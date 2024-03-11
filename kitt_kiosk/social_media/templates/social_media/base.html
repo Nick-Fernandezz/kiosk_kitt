@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}{% endblock title %}
+    <link rel="stylesheet" href="{% static "social_media/css/base.css" %}">
+    <link rel="stylesheet" href="{% static "main/css/bootstrap.min.css" %}">
+    {% block head %}{% endblock head %}
+</head>
+<body>
+    <div class="logo-block">
+        <a href="/" class="logo-link">
+            <img src="{% static "social_media/imgs/logo.png" %}" alt="" class="logo" height="64px">
+        </a>
+    </div>
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+    <script src="{% static "main/js/bootstrap.min.js" %} "></script>
+</body>
+</html>

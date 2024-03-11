@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.news-title {
+    font-family: "Montserrat";
+    color: #fff;
+
+    margin-top: 100px;
+}
+
+.text-place {
+    margin-top: 30px;
+}
+
+.text-place p,  li {
+    color: #fff;
+    /* font-family: "Montserrat"; */
+}

@@ -1,0 +1,28 @@
+{% include "main/base.html" %}
+{% load static %}
+
+{% block title %}<title>Социальные сети</title>{% endblock title %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'social_media/css/index.css' %}">
+{% endblock head %}
+
+{% block content %}
+<div class="container">
+    <div class="row sc-place">
+        {% for sm in social_medias %}
+        <div class="col-6">
+            <div class="sc-block">
+                <h3>
+                    {{sm.title}}
+                </h3>
+                <div class="sc-imgs">
+                    <div class="sc-icon" style="background-image: url('{{ sm.bg_img.url }}');"></div>
+                    <div class="sc-qr" style="background-image: url('{{ sm.qr_code.url }}');"></div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

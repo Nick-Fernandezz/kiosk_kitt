@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.page-place {
+    margin-top: 200px;
+}
+
+.news-place {
+    background-color: rgb(170, 186, 113);
+    margin-bottom: 20px;
+}

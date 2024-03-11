@@ -1,0 +1,36 @@
+{% include "main/base.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static "news/css/index.css" %}">
+{% endblock head %}
+
+{% block content %}
+    <div class="container page-place">
+
+        {% for news_image in news %}
+        <div class="news-place">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-8">
+                    <img src="{{news_image.image.url}}" class="d-block w-100" alt="...">
+                </div>
+                <div class="col-4">
+                    <h4>{{news_image.news.title}}</h4>
+                    <p>{{news_image.news.text|truncatechars:200|safe}}</p>
+                    <div style="text-align: center; position: relative; left: -10px; bottom: 0;">
+                        <a  href="{% url "detail_news_page" news_image.news.id %}" class="btn btn-warning">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        {% endfor %}
+
+        
+
+    <script src="{% static "main/js/bootstrap.min.js" %} "></script>
+    </div>
+{% endblock content %}
+
+

@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "main/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "main/css/base.css" %}">
+    <title>{% block title %}Киоск ГАПОУ КК КИТТ{% endblock title %}</title>
+    {% block head %}
+    
+    {% endblock head %}
+</head>
+<body>
+    <div class="logo-place">
+        <a href="/"><img src="{% static "main/images/logo.png" %}" alt="" class="logo" height="64px"></a>
+    </div>
+    {% block content %}{% endblock content %}
+    <script src="{% static "main/js/bootstrap.min.js" %} "></script>
+</body>
+</html>

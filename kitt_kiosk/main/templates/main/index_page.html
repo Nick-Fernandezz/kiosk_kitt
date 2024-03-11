@@ -1,0 +1,89 @@
+{% include "main/base.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static "main/css/swiper-bundle.min.css" %}">
+<link rel="stylesheet" href="{% static "main/css/index_page.css" %}">
+{% endblock head %}
+
+{% block content %}
+<div class="index_slider swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      
+        <div class="swiper-slide">
+            <div class="container h-100">
+                <div class="row align-items-center h-100">
+                    <div class="col-6">
+                        <div onclick='window.location.href = "{% url "index_social_media_page" %}"' class="menu-block" style="background-image: url('{% static "main/images/menu/social_media.jpg" %}');">
+                            <h3>Наши социальные сети</h3>
+                            <a href=""><span class="menu-link"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div onclick='window.location.href = "{% url "index_timetable_page" %}"' class="menu-block" style="background-image: url('{% static "main/images/menu/timetable.jpg" %}');">
+                            <h3>Расписание</h3>
+                            <a href=""><span class="menu-link"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div onclick='window.location.href = "{% url "index_news_page" %}"'  class="menu-block" style="background-image: url('{% static "main/images/menu/news.jpg" %}');">
+                            <h3>Новости</h3>
+                            <a href=""><span class="menu-link"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div onclick='window.location.href = "/"' class="menu-block" style="background-image: url('{% static "main/images/menu/education.jpg" %}');">
+                            <h3>Дополнительное образование</h3>
+                            <span class="menu-link"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      {% for slide in index_slides %}
+        <div class="swiper-slide">
+            <div class="slide" style="background-image: url('{{slide.media.url}}');">
+                {% if slide.title %}
+                    <h2 class="slider-title">{{slide.title}}</h2>
+                {% endif %}
+            </div>
+        </div>
+      {% endfor %}
+      
+    
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    <!-- If we need scrollbar -->
+    <!-- <div class="swiper-scrollbar"></div> -->
+</div>
+<!-- <div class="container">
+    <h2 class="social_media_title">
+        Наши социальные сети:
+    </h2>
+    <div class="social-media">
+        
+        {% for SC in SCs %}
+            {% for key, value in SC_imgs.items %}
+                {% if SC.title == key %}
+                <div class="social-media-link">
+                    <a href=""><img src="{% static value %}" width='64'></a>
+                </div>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+</div> -->
+
+<!-- <script src="{% static "main/js/swiper-bundle.min.js" %}"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="{% static "main/js/swiper.js" %}"></script>
+{% endblock content %}

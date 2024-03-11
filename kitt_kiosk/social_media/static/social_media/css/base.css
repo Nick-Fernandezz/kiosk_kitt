@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "Montserrat";
+    src: url('../fonts/Montserrat-Bold.ttf');
+}
+
+.logo-block {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+}
