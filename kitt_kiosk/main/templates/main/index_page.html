@@ -46,7 +46,7 @@
       {% for slide in index_slides %}
         <div class="swiper-slide">
             <div class="slide" style="background-image: url('{{slide.media.url}}');">
-                {% if slide.title %}
+                {% if slide.is_active_title %}
                     <h2 class="slider-title">{{slide.title}}</h2>
                 {% endif %}
             </div>

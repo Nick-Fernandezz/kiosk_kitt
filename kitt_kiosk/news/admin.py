@@ -23,6 +23,7 @@ class AdminNewsImagesInline(admin.StackedInline):
 class AdminNewsImages(admin.ModelAdmin):
     inlines = [AdminNewsImagesInline,]
     list_display = ('id', 'is_active', 'title', 'created_date')
+    readonly_fields = ('created_by', 'updated_by')
     list_display_links = ('id', 'title', 'created_date')
     list_editable = ('is_active', )
 

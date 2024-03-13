@@ -1,6 +1,7 @@
 from django.db import models
 from ckeditor.fields import RichTextField
 
+from django_currentuser.db.models import CurrentUserField
 # Create your models here.
 
 class News(models.Model):
@@ -9,7 +10,10 @@ class News(models.Model):
     text = RichTextField('Текст')
     is_active = models.BooleanField('Активно', default=True)
     created_date = models.DateTimeField('Дата написания', auto_now_add=True)
-    
+    updated_date = models.DateTimeField('Дата последнего изменения', auto_now=True)
+    created_by = CurrentUserField(verbose_name="Создал", on_delete=models.CASCADE, default=1, related_name='created_by')
+    updated_by = updated_by = CurrentUserField(verbose_name="Изменил", on_update=True, related_name='updated_by')
+
     class Meta:
         verbose_name="новость"
         verbose_name_plural = "Новости"
