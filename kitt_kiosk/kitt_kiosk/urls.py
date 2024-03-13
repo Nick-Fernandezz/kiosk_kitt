@@ -21,6 +21,7 @@ from main import urls as main_urls
 from social_media import urls as sc_urls
 from timetable import urls as timetable_urls
 from news import urls as news_urls
+from additional_edu import urls as add_edu_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,4 +30,5 @@ urlpatterns = [
     path('timetable/', include(timetable_urls)),
     path('news/', include(news_urls)),
     path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('additional/', include(add_edu_urls))
 ]

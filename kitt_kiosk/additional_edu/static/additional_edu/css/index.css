@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "Montserrat";
+    src: url('../fonts/Montserrat-Bold.ttf');
+}
+
+.links-place {
+    margin-top: 200px;
+}
+
+.links-place {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 20px; 
+    font-family: "Montserrat"
+}
+
+.links-place a {
+    color: #bdc840;
+    text-decoration: none;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
