@@ -18,8 +18,6 @@ def index_news_page(request):
 def detail_news_page(request, news_id):
     news = get_object_or_404(News, id=news_id)
     news_images = NewsImages.objects.filter(news__id=news_id)
-    
-    print(news_images)
 
     return render(request, 'news/detail_news_page.html', context={
         'news': news,
