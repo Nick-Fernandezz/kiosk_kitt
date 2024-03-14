@@ -1,0 +1,20 @@
+{% include "main/base.html" %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static "additional_edu/css/index.css" %}">
+{% endblock head %}
+
+{% block content %}
+<div class="container">
+    
+    <div class="links-place">
+        <div class="text-center">
+            <h1>Документы</h1>
+        </div>
+        {% for doc in docs %}
+            <a href="{% url "detail_doc_page" doc.id %}">{{doc.title}}</a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+.scans-place {
+    margin-top: 200px;
+} 
+
+h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 100%;
+}

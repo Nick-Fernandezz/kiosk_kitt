@@ -31,7 +31,7 @@ class Docs(models.Model):
 
 class DocsScan(models.Model):
     doc = models.ForeignKey(Docs, on_delete=models.CASCADE)
-    image = models.ImageField('Скан документа')
+    image = models.ImageField('Скан документа', upload_to='additional_edu/scans/%Y/%m/%d/%H-%M-%S/')
 
     class Meta:
         verbose_name = "скан"
