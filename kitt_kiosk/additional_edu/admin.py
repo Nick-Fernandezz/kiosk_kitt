@@ -31,8 +31,8 @@ class AdminDocs(admin.ModelAdmin):
         )
     )
 
-    list_display = ('title', 'created_date', 'created_by')
-    list_display_links = ('title', 'created_date', 'created_by')
-    readonly_fields = ('created_date', 'updated_date', 'created_by', 'updated_by')
+    list_display = ('title', 'created_date')
+    list_display_links = ('title', 'created_date')
+    readonly_fields = ('created_date', 'updated_date')
 
     
