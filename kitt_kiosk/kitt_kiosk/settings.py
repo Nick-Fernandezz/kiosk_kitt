@@ -83,8 +83,12 @@ WSGI_APPLICATION = 'kitt_kiosk.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'KittKiosk',
+        "USER": "kitt_kiosk",
+        "PASSWORD": "KittKiosk123098Qaz",
+        "HOST": "10.193.245.5",
+        # "PORT": "5432",
     }
 }
 
@@ -113,11 +117,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ru'
 
-TIME_ZONE = 'Europe/Moscow'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
