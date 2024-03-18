@@ -89,6 +89,9 @@ DATABASES = {
         "PASSWORD": "KittKiosk123098Qaz",
         "HOST": "10.193.245.5",
         # "PORT": "5432",
+        'OPTIONS': {
+                'charset': 'utf8mb4',
+            }
     }
 }
 

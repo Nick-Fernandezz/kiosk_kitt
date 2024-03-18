@@ -18,13 +18,17 @@ class SocialMediaAdmin(admin.ModelAdmin):
                 'qr_code'
             )
         }),
-        (None, {
+        ("Дополнительно", {
+            "classes": ["collapse"],
             'fields': (
                 'created_date',
+                'updated_date',
+                'created_by',
+                'updated_by'
             )
         })
     )
-    readonly_fields = ('created_date', )
-    list_display = ('id', 'is_active', 'title', 'created_date')
-    list_display_links = ('id', 'title')
+    readonly_fields = ('created_date', 'updated_date', 'created_by', 'updated_by')
+    list_display = ('id', 'is_active', 'title', 'created_date', 'created_by', )
+    list_display_links = ('id', 'title', 'created_date',)
     list_editable = ('is_active', )
