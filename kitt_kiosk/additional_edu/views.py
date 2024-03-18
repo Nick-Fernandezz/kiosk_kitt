@@ -12,7 +12,6 @@ def index_additional_education_page(request):
 
 def detail_doc_page(request, doc_id):
     docs = get_list_or_404(DocsScan, doc__id=doc_id)
-    print(docs)
     return render(request, 'additional_edu/details_doc.html', context={
         'docs': docs
     })

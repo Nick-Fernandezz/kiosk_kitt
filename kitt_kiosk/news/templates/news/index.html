@@ -31,6 +31,15 @@
 
     <script src="{% static "main/js/bootstrap.min.js" %} "></script>
     </div>
+    <nav aria-label="Page navigation example" class="paginator-nav">
+        <ul class="pagination justify-content-center">
+          {% for page_num in news.paginator.page_range %}
+          <li class="page-item"><a class="page-link" href="?page={{page_num}}">{{page_num}}</a></li>
+          {% endfor %}
+          
+          
+        </ul>
+      </nav>
 {% endblock content %}
 
 

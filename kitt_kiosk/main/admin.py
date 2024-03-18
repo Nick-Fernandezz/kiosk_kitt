@@ -37,6 +37,7 @@ class SliderAdmin(admin.ModelAdmin):
     list_display = ('id' ,'is_active', 'title', 'created_by', 'created_date', 'media_image')
     list_display_links = ('id' ,'title', 'created_by')
     list_editable = ('is_active',)
+    search_fields = ('title',)
 
     def media_image(self, obj):
         return mark_safe(f'<img src="{obj.media.url}" width="100px">')
