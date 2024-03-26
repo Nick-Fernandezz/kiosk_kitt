@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "Montserrat";
+    src: url('../fonts/Montserrat-Bold.ttf');
+}
+
+body {
+    background-color: rgb(31, 42, 30);
+    /* background-color: #8ad8ff; */
+}
+
+.logo-place {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+}
+
+.home-link {
+    position: absolute;
+    bottom: 10px;
+    left: 46%;
+}
