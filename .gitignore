@@ -1,4 +1,4 @@
 .env
 kitt_kiosk/db.sqlite3
 kitt_kiosk/media/*
-kitt_kiosk/kitt_kiosk/settings.py
+# kitt_kiosk/kitt_kiosk/settings.py
